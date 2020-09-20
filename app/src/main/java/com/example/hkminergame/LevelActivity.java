@@ -50,15 +50,15 @@ public class LevelActivity extends AppCompatActivity {
     private ScrollView.OnScrollChangeListener scroll_listener = new View.OnScrollChangeListener() {
         @Override
         public void onScrollChange(View view, int i, int i1, int i2, int i3) {
-            if(i1-i3>0) {
+            if(i1-i3 > 5) {
                 for (ImageView island : arrayisland) {
                     RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) island.getLayoutParams();
                     params.width = island.getWidth() - (1);
-                    params.height = island.getHeight() - (2);
+                    params.height = island.getHeight() - (1);
                     island.setLayoutParams(params);
                 }
             }
-            if(i1-i3<0) {
+            else if(i1-i3 < 5) {
                 for (ImageView island : arrayisland) {
                     RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) island.getLayoutParams();
                     params.width = island.getWidth() + (1);
