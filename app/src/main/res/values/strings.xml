@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">HK Miner Game</string>
-    <string name="_loading">Loading Percentage</string>
+    <string name="pb_background">Progress Bar Background</string>
 </resources>

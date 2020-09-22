@@ -42,20 +42,46 @@ public class LoadingActivity extends AppCompatActivity {
         new Thread(new Runnable() {
             public void run() {
                 while ( progressStatus < 100 ){
-                    progressStatus += 2;
-                    try{
-                        Thread.sleep( 50 );
-                    } catch(Exception e){
-                        System.out.println("Error in progress bar");
-                    }
+                    progressStatus += 50;
                     handler.post(new Runnable() {
                         public void run() {
                             pb.setProgress(progressStatus);
                             text.setText((progressStatus + " %").toString());
                         }
                     });
+                    try{
+                        Thread.sleep( 1000 );
+                    } catch(Exception e){
+                        System.out.println("Error in progress bar");
+                    }
+                    progressStatus += 31;
+                    handler.post(new Runnable() {
+                        public void run() {
+                            pb.setProgress(progressStatus);
+                            text.setText((progressStatus + " %").toString());
+                        }
+                    });
+                    try{
+                        Thread.sleep( 800 );
+                    } catch(Exception e){
+                        System.out.println("Error in progress bar");
+                    }
+                    for(int i = 0 ; i < 19 ; i++) {
+                        progressStatus++;
+                        handler.post(new Runnable() {
+                            public void run() {
+                                pb.setProgress(progressStatus);
+                                text.setText((progressStatus + " %").toString());
+                            }
+                        });
+                        try{
+                            Thread.sleep( 50 );
+                        } catch(Exception e){
+                            System.out.println("Error in progress bar");
+                        }
+                    }
                 }
-                startActivity(new Intent(LoadingActivity.this, LevelActivity.class));
+                startActivity(new Intent(LoadingActivity.this, MainActivity.class));
                 finish();
             }
         }).start();

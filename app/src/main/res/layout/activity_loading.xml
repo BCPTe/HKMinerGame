@@ -4,34 +4,37 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:contentDescription="@string/_loading"
+        android:id="@+id/image_pb"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:contentDescription="@string/pb_background"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp"
-        android:src="@drawable/buttons_template"
-        android:scaleType="fitXY"/>
+        android:src="@drawable/progress_bar500x60"
+        android:scaleType="fitXY" />
 
     <ProgressBar
         android:id="@+id/pb"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/custom_progressbar"
         android:progress="0"
-        android:layout_width="230dp"
-        android:layout_height="50dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp" />
+        android:layout_marginBottom="12dp"/>
 
     <TextView
         android:id="@+id/pb_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@id/pb"
-        android:layout_alignEnd="@id/pb"
+        android:textAlignment="center"
+        android:textSize="15dp"
         android:layout_alignBottom="@id/pb"
         android:layout_alignTop="@id/pb"
-        android:gravity="center" />
+        android:layout_alignStart="@id/pb"
+        android:layout_alignEnd="@id/pb"
+        android:translationY="-2.5dp"/>
 
 
 </RelativeLayout>
