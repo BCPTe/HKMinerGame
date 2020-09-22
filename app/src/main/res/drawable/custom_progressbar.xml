@@ -9,8 +9,8 @@
                 <solid
                     android:color="#00FFD9" />
                 <size
-                    android:width="300dp"
-                    android:height="15dp" />
+                    android:width="320dp"
+                    android:height="24dp" />
             </shape>
         </clip>
     </item>
@@ -26,7 +26,8 @@
             <gradient
                 android:startColor="#70000000"
                 android:centerColor="#00000000"
-                android:endColor="#70000000" />
+                android:endColor="#70000000"
+                android:angle="90" />
         </shape>
     </item>
 </layer-list>

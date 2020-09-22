@@ -1,20 +1,15 @@
 package com.example.hkminergame;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.SystemClock;
-import android.util.Log;
+
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.stream.IntStream;
 
 public class LoadingActivity extends AppCompatActivity {
     ProgressBar pb;
@@ -42,7 +37,7 @@ public class LoadingActivity extends AppCompatActivity {
         new Thread(new Runnable() {
             public void run() {
                 while ( progressStatus < 100 ){
-                    progressStatus += 50;
+                    progressStatus += 23;
                     handler.post(new Runnable() {
                         public void run() {
                             pb.setProgress(progressStatus);
@@ -54,6 +49,18 @@ public class LoadingActivity extends AppCompatActivity {
                     } catch(Exception e){
                         System.out.println("Error in progress bar");
                     }
+                    progressStatus += 27;
+                    handler.post(new Runnable() {
+                        public void run() {
+                            pb.setProgress(progressStatus);
+                            text.setText((progressStatus + " %").toString());
+                        }
+                    });
+                    try{
+                        Thread.sleep( 500 );
+                    } catch(Exception e){
+                        System.out.println("Error in progress bar");
+                    }
                     progressStatus += 31;
                     handler.post(new Runnable() {
                         public void run() {
@@ -62,7 +69,7 @@ public class LoadingActivity extends AppCompatActivity {
                         }
                     });
                     try{
-                        Thread.sleep( 800 );
+                        Thread.sleep( 700 );
                     } catch(Exception e){
                         System.out.println("Error in progress bar");
                     }
