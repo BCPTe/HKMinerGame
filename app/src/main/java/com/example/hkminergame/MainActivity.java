@@ -14,7 +14,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
-    ImageButton button;
+    ImageButton playButton, settingsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,17 +29,28 @@ public class MainActivity extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         // end visibility settings
 
-        button = findViewById(R.id.StartButton);
-        button.setOnClickListener(button_listener);
+        playButton = findViewById(R.id.start_button);
+        playButton.setOnClickListener(play_button_listener);
+        settingsButton = findViewById(R.id.settings_button);
+        settingsButton.setOnClickListener(settings_button_listener);
     }
 
-    private ImageButton.OnClickListener button_listener =
+    private ImageButton.OnClickListener play_button_listener =
             new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent level = new Intent(MainActivity.this, LevelActivity.class);
-                    startActivity(level);
+                    Intent intent = new Intent(MainActivity.this, LevelActivity.class);
+                    startActivity(intent);
                     finish();
+                }
+            };
+
+    private ImageButton.OnClickListener settings_button_listener =
+            new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                    startActivity(intent);
                 }
             };
 }
