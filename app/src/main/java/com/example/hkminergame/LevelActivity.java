@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -24,6 +25,8 @@ public class LevelActivity extends AppCompatActivity {
     final int FPS = 40;
     Display display;
     Point size;
+    int[] pos;
+    ArrayList<int[]> position;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,15 +47,14 @@ public class LevelActivity extends AppCompatActivity {
 
         y = scroll.getScrollY();
 
+        position = new ArrayList<>();
+        pos = new int[2];
+
         display = getWindowManager().getDefaultDisplay();
         size = new Point();
         display.getSize(size);
 
-        System.out.println("posizione scroll:"+y);
-        float x = island1.getY();
-        System.out.println("posizione isola:"+x);
-        float start = island1.getPivotY();
-        System.out.println("differenza:"+start);
+        onWindowFocusChanged();
 
         timer = new Timer();
         timer.schedule(new TimerTask() {
@@ -61,21 +63,36 @@ public class LevelActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        System.out.println(y);
                         if (y < scroll.getScrollY()) {
                             for (ImageView island : arrayisland) {
-                                RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) island.getLayoutParams();
-                                params.width = (int) (island.getWidth() - ((float)1/(1-(float)y/10)));
-                                params.height = (int) (island.getHeight() - ((float)1/(1-(float)y/10)));
-                                island.setLayoutParams(params);
+                                searchposition(island, arrayisland.indexOf(island));
+                                if(position.get(arrayisland.indexOf(island))[1] > 0 && position.get(arrayisland.indexOf(island))[1] < size.y) {
+                                    for(int j = 1; j < 100; j++) {
+                                        if(position.get(arrayisland.indexOf(island))[1] > (size.y/100)*j && position.get(arrayisland.indexOf(island))[1] < (size.y/100)*(j+1)) {
+                                            RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) island.getLayoutParams();
+                                            params.width = j*2;
+                                            params.height = j*2;
+                                            island.setLayoutParams(params);
+                                            break;
+                                        }
+                                    }
+                                }
                                 y = scroll.getScrollY();
                             }
                         } else if (y > scroll.getScrollY()) {
                             for (ImageView island : arrayisland) {
-                                RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) island.getLayoutParams();
-                                params.width = (int) (island.getWidth() + ((float)1/(1-(float)y/10)));
-                                params.height = (int) (island.getHeight() + ((float)1/(1-(float)y/10)));
-                                island.setLayoutParams(params);
+                                searchposition(island, arrayisland.indexOf(island));
+                                if(position.get(arrayisland.indexOf(island))[1] > 0 && position.get(arrayisland.indexOf(island))[1] < size.y) {
+                                    for(int j = 1; j < 100; j++) {
+                                        if (position.get(arrayisland.indexOf(island))[1] > (size.y/100)*j && position.get(arrayisland.indexOf(island))[1] < (size.y/100)*(j+1)) {
+                                            RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) island.getLayoutParams();
+                                            params.width = j*2;
+                                            params.height = j*2;
+                                            island.setLayoutParams(params);
+                                            break;
+                                        }
+                                    }
+                                }
                                 y = scroll.getScrollY();
                             }
                         }
@@ -92,5 +109,18 @@ public class LevelActivity extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_FULLSCREEN
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         // end visibility settings
+    }
+
+    public void searchposition (ImageView img, int i) {
+            img.getLocationOnScreen(pos);
+            position.set(i,pos);
+    }
+
+    public void onWindowFocusChanged () {
+        for(int i = arrayisland.size()-1; i >= 0; i--) {
+            arrayisland.get(i).getLocationOnScreen(pos);
+            position.add(pos);
+            //System.out.println(pos[0] + " " + pos[1]);
+        }
     }
 }
