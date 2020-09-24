@@ -2,17 +2,13 @@ package com.example.hkminergame;
 
 import android.graphics.Point;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.Display;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewTreeObserver;
+import android.view.View;;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -27,10 +23,19 @@ public class LevelActivity extends AppCompatActivity {
     Point size;
     int[] pos;
     ArrayList<int[]> position;
+    RelativeLayout.LayoutParams params;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level);
+
+        // visibility settings
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                        | View.SYSTEM_UI_FLAG_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+        // end visibility settings
 
         scroll = findViewById(R.id.scroll);
         arrayisland = new ArrayList<>();
@@ -56,6 +61,29 @@ public class LevelActivity extends AppCompatActivity {
 
         onWindowFocusChanged();
 
+        for(ImageView island : arrayisland){
+            searchposition(island, arrayisland.indexOf(island));
+            if(arrayisland.indexOf(island) > 0 && arrayisland.indexOf(island) < 10) {
+                for (int j = 1; j < 100; j++) {
+                    if (position.get(arrayisland.indexOf(island))[1] > (size.y / 100) * j && position.get(arrayisland.indexOf(island))[1] < (size.y / 100) * (j + 1)) {
+                        params = (RelativeLayout.LayoutParams) island.getLayoutParams();
+                        params.width = ((size.y / 100) * j) / 7;
+                        params.height = ((size.y / 100) * j) / 7;
+                        island.setLayoutParams(params);
+                        break;
+                    }
+                }
+            }
+        }
+        for(ImageView island : arrayisland){
+            if(arrayisland.indexOf(island)<5)
+                continue;
+            params = (RelativeLayout.LayoutParams) island.getLayoutParams();
+            params.width = ((size.y/100)*99)/7;
+            params.height = ((size.y/100)*99)/7;
+            island.setLayoutParams(params);
+        }
+
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -69,9 +97,9 @@ public class LevelActivity extends AppCompatActivity {
                                 if(position.get(arrayisland.indexOf(island))[1] > 0 && position.get(arrayisland.indexOf(island))[1] < size.y) {
                                     for(int j = 1; j < 100; j++) {
                                         if(position.get(arrayisland.indexOf(island))[1] > (size.y/100)*j && position.get(arrayisland.indexOf(island))[1] < (size.y/100)*(j+1)) {
-                                            RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) island.getLayoutParams();
-                                            params.width = j*2;
-                                            params.height = j*2;
+                                            params = (RelativeLayout.LayoutParams) island.getLayoutParams();
+                                            params.width = ((size.y/100)*j)/7;
+                                            params.height = ((size.y/100)*j)/7;
                                             island.setLayoutParams(params);
                                             break;
                                         }
@@ -85,9 +113,9 @@ public class LevelActivity extends AppCompatActivity {
                                 if(position.get(arrayisland.indexOf(island))[1] > 0 && position.get(arrayisland.indexOf(island))[1] < size.y) {
                                     for(int j = 1; j < 100; j++) {
                                         if (position.get(arrayisland.indexOf(island))[1] > (size.y/100)*j && position.get(arrayisland.indexOf(island))[1] < (size.y/100)*(j+1)) {
-                                            RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) island.getLayoutParams();
-                                            params.width = j*2;
-                                            params.height = j*2;
+                                            params = (RelativeLayout.LayoutParams) island.getLayoutParams();
+                                            params.width = ((size.y/100)*j)/7;
+                                            params.height = ((size.y/100)*j)/7;
                                             island.setLayoutParams(params);
                                             break;
                                         }
@@ -100,15 +128,6 @@ public class LevelActivity extends AppCompatActivity {
                 });
             }
         },0,1000/FPS);
-
-
-        // visibility settings
-        View decorView = getWindow().getDecorView();
-        decorView.setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                        | View.SYSTEM_UI_FLAG_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
-        // end visibility settings
     }
 
     public void searchposition (ImageView img, int i) {
@@ -120,7 +139,6 @@ public class LevelActivity extends AppCompatActivity {
         for(int i = arrayisland.size()-1; i >= 0; i--) {
             arrayisland.get(i).getLocationOnScreen(pos);
             position.add(pos);
-            //System.out.println(pos[0] + " " + pos[1]);
         }
     }
 }
