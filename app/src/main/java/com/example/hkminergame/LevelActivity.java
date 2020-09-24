@@ -1,22 +1,19 @@
 package com.example.hkminergame;
 
-import android.app.assist.AssistStructure;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.widget.ImageViewCompat;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.widget.NestedScrollView;
 
 import java.util.ArrayList;
 
 public class LevelActivity extends AppCompatActivity {
-    ScrollView scroll;
+    NestedScrollView scroll;
     ImageView island1, island2, island3, island4, island5, island6, island7, island8, island9, island10;
     ArrayList<ImageView> arrayisland;
 
@@ -47,22 +44,22 @@ public class LevelActivity extends AppCompatActivity {
         // end visibility settings
     }
 
-    private ScrollView.OnScrollChangeListener scroll_listener = new View.OnScrollChangeListener() {
+    private NestedScrollView.OnScrollChangeListener scroll_listener = new NestedScrollView.OnScrollChangeListener() {
         @Override
-        public void onScrollChange(View view, int i, int i1, int i2, int i3) {
-            if(i1-i3 > 5) {
-                for (ImageView island : arrayisland) {
-                    RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) island.getLayoutParams();
-                    params.width = island.getWidth() - (1);
-                    params.height = island.getHeight() - (1);
+        public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+            if(scrollY - oldScrollY > 0) {
+                for(ImageView island : arrayisland) {
+                    ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) island.getLayoutParams();
+                    params.width = island.getWidth() - 1;
+                    params.height = island.getHeight() - 1;
                     island.setLayoutParams(params);
                 }
             }
-            else if(i1-i3 < 5) {
-                for (ImageView island : arrayisland) {
-                    RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) island.getLayoutParams();
-                    params.width = island.getWidth() + (1);
-                    params.height = island.getHeight() + (1);
+            else {
+                for(ImageView island : arrayisland) {
+                    ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) island.getLayoutParams();
+                    params.width = island.getWidth() + 1;
+                    params.height = island.getHeight() + 1;
                     island.setLayoutParams(params);
                 }
             }
