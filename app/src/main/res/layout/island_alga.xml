@@ -1,8 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_principal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/elevator"
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toTopOf="@id/linear"
+                app:layout_constraintEnd_toStartOf="@id/linear"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="40dp"
+                android:src="@drawable/rect"/>
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="@id/constraint_principal"
+                app:layout_constraintEnd_toEndOf="@id/constraint_principal"
+                android:layout_marginTop="250dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="vertical">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:id="@+id/level1"
+                        android:contentDescription="@string/level_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintTop_toTopOf="@id/constraint"
+                        app:layout_constraintEnd_toEndOf="@id/constraint"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/rect" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint1"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:id="@+id/level2"
+                        android:contentDescription="@string/level_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintTop_toTopOf="@id/constraint1"
+                        app:layout_constraintEnd_toEndOf="@id/constraint1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/rect" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint2"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:contentDescription="@string/level_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintTop_toTopOf="@id/constraint2"
+                        app:layout_constraintEnd_toEndOf="@id/constraint2"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/rect" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint3"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:contentDescription="@string/level_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintTop_toTopOf="@id/constraint3"
+                        app:layout_constraintEnd_toEndOf="@id/constraint3"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/rect" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint4"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:contentDescription="@string/level_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintTop_toTopOf="@id/constraint4"
+                        app:layout_constraintEnd_toEndOf="@id/constraint4"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/rect" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint5"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:contentDescription="@string/level_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintTop_toTopOf="@id/constraint5"
+                        app:layout_constraintEnd_toEndOf="@id/constraint5"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/rect" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint6"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:contentDescription="@string/level_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintTop_toTopOf="@id/constraint6"
+                        app:layout_constraintEnd_toEndOf="@id/constraint6"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/rect" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint7"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:contentDescription="@string/level_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintTop_toTopOf="@id/constraint7"
+                        app:layout_constraintEnd_toEndOf="@id/constraint7"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/rect" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint8"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:contentDescription="@string/level_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintTop_toTopOf="@id/constraint8"
+                        app:layout_constraintEnd_toEndOf="@id/constraint8"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/rect" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint9"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:contentDescription="@string/level_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintTop_toTopOf="@id/constraint9"
+                        app:layout_constraintEnd_toEndOf="@id/constraint9"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/rect" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
