@@ -3,7 +3,7 @@ package com.example.hkminergame;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.view.Display;
-import android.view.View;;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
