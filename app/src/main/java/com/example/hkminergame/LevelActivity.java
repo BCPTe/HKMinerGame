@@ -5,16 +5,18 @@ import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.widget.NestedScrollView;
+
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class LevelActivity extends AppCompatActivity {
     final int FPS = 40;
-    ScrollView scroll;
+    NestedScrollView scroll;
     ImageView island1, island2, island3, island4, island5, island6, island7, island8, island9, island10;
     ArrayList<ImageView> arrayisland;
     ArrayList<int[]> position;
@@ -23,7 +25,7 @@ public class LevelActivity extends AppCompatActivity {
     Timer timer;
     Display display;
     Point size;
-    RelativeLayout.LayoutParams params;
+    ConstraintLayout.LayoutParams params;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,23 +56,21 @@ public class LevelActivity extends AppCompatActivity {
         for(ImageView island : arrayisland){
             indexOfIsland = arrayisland.indexOf(island);
             setActualPositionOfIsland(island, indexOfIsland);
-            if(indexOfIsland > 5 && indexOfIsland < 10) {
-                for (int j = 1; j < 100; j++) {
-                    if (position.get(indexOfIsland)[1] > (size.y / 100) * j && position.get(indexOfIsland)[1] < (size.y / 100) * (j + 1)) {
-                        params = (RelativeLayout.LayoutParams) island.getLayoutParams();
-                        params.width = ((size.y / 100) * j) / 7;
-                        params.height = ((size.y / 100) * j) / 7;
-                        island.setLayoutParams(params);
-                        break;
-                    }
+            for (int j = 1; j < 100; j++) {
+                if (position.get(indexOfIsland)[1] > (size.y / 100) * j && position.get(indexOfIsland)[1] < (size.y / 100) * (j + 1)) {
+                    params = (ConstraintLayout.LayoutParams) island.getLayoutParams();
+                    params.width = ((size.y / 100) * j) / 7;
+                    params.height = ((size.y / 100) * j) / 7;
+                    island.setLayoutParams(params);
+                    break;
                 }
             }
         }
 
         for(ImageView island : arrayisland){
-            if(arrayisland.indexOf(island)<5)
+            if(arrayisland.indexOf(island)<4)
                 continue;
-            params = (RelativeLayout.LayoutParams) island.getLayoutParams();
+            params = (ConstraintLayout.LayoutParams) island.getLayoutParams();
             params.width = ((size.y/100)*99)/7;
             params.height = ((size.y/100)*99)/7;
             island.setLayoutParams(params);
@@ -88,9 +88,9 @@ public class LevelActivity extends AppCompatActivity {
                             setActualPositionOfIsland(island, indexOfIsland);
                             for (int j = 1; j < 100; j++) {
                                 if (position.get(indexOfIsland)[1] > (size.y / 100) * j && position.get(indexOfIsland)[1] < (size.y / 100) * (j + 1)) {
-                                    RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) island.getLayoutParams();
-                                    params.width = j * 2;
-                                    params.height = j * 2;
+                                    ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) island.getLayoutParams();
+                                    params.width = ((size.y/100)*j)/7;
+                                    params.height = ((size.y/100)*j)/7;
                                     island.setLayoutParams(params);
                                     break;
                                 }
