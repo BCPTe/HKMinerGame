@@ -1,15 +1,15 @@
 package com.example.hkminergame;
+import com.example.hkminergame.island.*;
 
+import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.ScrollView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.widget.NestedScrollView;
-
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -43,6 +43,16 @@ public class LevelActivity extends AppCompatActivity {
         arrayisland.add(island8 = findViewById(R.id.island8));
         arrayisland.add(island9 = findViewById(R.id.island9));
         arrayisland.add(island10 = findViewById(R.id.island10));
+        island1.setOnClickListener(island1listener);
+        island2.setOnClickListener(island2listener);
+        island3.setOnClickListener(island3listener);
+        island4.setOnClickListener(island4listener);
+        island5.setOnClickListener(island5listener);
+        island6.setOnClickListener(island6listener);
+        island7.setOnClickListener(island7listener);
+        island8.setOnClickListener(island8listener);
+        island9.setOnClickListener(island9listener);
+        island10.setOnClickListener(island10listener);
 
         position = new ArrayList<>();
         pos = new int[2];
@@ -133,7 +143,116 @@ public class LevelActivity extends AppCompatActivity {
         for(int i = arrayisland.size()-1; i >= 0; i--) {
             arrayisland.get(i).getLocationOnScreen(pos);
             position.add(pos);
-            //System.out.println(pos[0] + " " + pos[1]);
         }
     }
+
+    private ImageView.OnClickListener island1listener =
+            new ImageView.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(LevelActivity.this, AlgaIsland.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    finish();
+                }
+            };
+
+    private ImageView.OnClickListener island2listener =
+            new ImageView.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(LevelActivity.this, SandIsland.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    finish();
+                }
+            };
+
+    private ImageView.OnClickListener island3listener =
+            new ImageView.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(LevelActivity.this, StoneIsland.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    finish();
+                }
+            };
+
+    private ImageView.OnClickListener island4listener =
+            new ImageView.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(LevelActivity.this, WoodIsland.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    finish();
+                }
+            };
+
+    private ImageView.OnClickListener island5listener =
+            new ImageView.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(LevelActivity.this, CoalIsland.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    finish();
+                }
+            };
+
+    private ImageView.OnClickListener island6listener =
+            new ImageView.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(LevelActivity.this, PlasticIsland.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    finish();
+                }
+            };
+
+    private ImageView.OnClickListener island7listener =
+            new ImageView.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(LevelActivity.this, CoralIsland.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    finish();
+                }
+            };
+
+    private ImageView.OnClickListener island8listener =
+            new ImageView.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(LevelActivity.this, GoldIsland.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    finish();
+                }
+            };
+
+    private ImageView.OnClickListener island9listener =
+            new ImageView.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(LevelActivity.this, GasIsland.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    finish();
+                }
+            };
+
+    private ImageView.OnClickListener island10listener =
+            new ImageView.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(LevelActivity.this, IceIsland.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    finish();
+                }
+            };
 }
