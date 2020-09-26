@@ -12,7 +12,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class AlgaIsland extends AppCompatActivity{
-    final int FPS = 500;
+    final int FPS = 1500;
     Elevator elevator;
     ImageView elevator_img;
     ConstraintLayout layout;
@@ -49,12 +49,15 @@ public class AlgaIsland extends AppCompatActivity{
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        if (x == 0 && !up) {
-                            elevator.destruct(R.id.elevator);
-                            elevator.move_y(R.id.elevator, R.id.constraint0);
-                        } else if (x == 0) {
-                            elevator.depose(R.id.elevator);
-                            up = !up;
+                        if (x == 0) {
+                            if(!up) {
+                                elevator.destruct(R.id.elevator);
+                                elevator.move_y(R.id.elevator, R.id.constraint0);
+                            }
+                            else{
+                                elevator.depose(R.id.elevator);
+                                up = !up;
+                            }
                         }
                         if (!up) {
                             elevator.move_y(R.id.elevator, array_layout.get(x));

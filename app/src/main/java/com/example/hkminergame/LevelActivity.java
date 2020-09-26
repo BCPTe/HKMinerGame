@@ -1,6 +1,6 @@
 package com.example.hkminergame;
-import com.example.hkminergame.island.*;
 
+import com.example.hkminergame.island.*;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
