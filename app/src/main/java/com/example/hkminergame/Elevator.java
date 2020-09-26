@@ -17,9 +17,8 @@ public class Elevator {
         constraint.clone(layout);
     }
 
-    public void move_y(int id_elevator, int id_level2){
-        constraint.connect(id_elevator, ConstraintSet.TOP, id_level2, ConstraintSet.TOP);
-        constraint.connect(id_elevator, ConstraintSet.END, id_level2, ConstraintSet.START);
+    public void move_y(int id_elevator, int id_levelTo){
+        constraint.connect(id_elevator, ConstraintSet.TOP, id_levelTo, ConstraintSet.TOP);
         constraint.applyTo(layout);
         TransitionManager.beginDelayedTransition(layout);
     }

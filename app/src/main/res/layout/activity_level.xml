@@ -5,12 +5,6 @@
     android:id="@+id/constt"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <pl.droidsonroids.gif.GifImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/test"
-        android:scaleType="fitXY"/>
-
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
@@ -23,6 +17,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/sea_animate"
+                app:layout_constraintStart_toStartOf="@id/constraint"
+                app:layout_constraintTop_toTopOf="@id/constraint"
+                android:scaleType="fitXY"/>
+
             <ImageView
                 android:id="@+id/island1"
                 android:layout_width="50dp"
@@ -30,8 +32,9 @@
                 android:src="@drawable/island"
                 app:layout_constraintTop_toTopOf="@id/constraint"
                 app:layout_constraintEnd_toEndOf="@id/constraint"
-                android:layout_marginTop="230dp"
-                android:layout_marginEnd="60dp" />
+                app:layout_constraintStart_toStartOf="@id/constraint"
+                android:layout_marginTop="310dp"
+                app:layout_constraintHorizontal_bias="0.8"/>
 
             <ImageView
                 android:id="@+id/island2"
@@ -40,7 +43,7 @@
                 android:src="@drawable/island"
                 app:layout_constraintTop_toBottomOf="@id/island1"
                 app:layout_constraintStart_toStartOf="@id/constraint"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="110dp"
                 android:layout_marginStart="80dp" />
 
             <ImageView
@@ -50,7 +53,7 @@
                 android:src="@drawable/island"
                 app:layout_constraintTop_toBottomOf="@id/island2"
                 app:layout_constraintEnd_toEndOf="@id/constraint"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="110dp"
                 android:layout_marginEnd="80dp" />
 
             <ImageView
@@ -60,7 +63,7 @@
                 android:src="@drawable/island"
                 app:layout_constraintTop_toBottomOf="@id/island3"
                 app:layout_constraintStart_toStartOf="@id/constraint"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="110dp"
                 android:layout_marginStart="120dp" />
 
             <ImageView
@@ -70,7 +73,7 @@
                 android:src="@drawable/island"
                 app:layout_constraintTop_toBottomOf="@id/island4"
                 app:layout_constraintEnd_toEndOf="@id/constraint"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="110dp"
                 android:layout_marginEnd="80dp" />
 
             <ImageView
@@ -80,7 +83,7 @@
                 android:src="@drawable/island"
                 app:layout_constraintTop_toBottomOf="@id/island5"
                 app:layout_constraintStart_toStartOf="@id/constraint"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="110dp"
                 android:layout_marginStart="60dp" />
 
             <ImageView
@@ -90,7 +93,7 @@
                 android:src="@drawable/island"
                 app:layout_constraintTop_toBottomOf="@id/island6"
                 app:layout_constraintEnd_toEndOf="@id/constraint"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="110dp"
                 android:layout_marginEnd="110dp" />
 
             <ImageView
@@ -100,7 +103,7 @@
                 android:src="@drawable/island"
                 app:layout_constraintTop_toBottomOf="@id/island7"
                 app:layout_constraintStart_toStartOf="@id/constraint"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="110dp"
                 android:layout_marginStart="80dp" />
 
             <ImageView
@@ -110,7 +113,7 @@
                 android:src="@drawable/island"
                 app:layout_constraintTop_toBottomOf="@id/island8"
                 app:layout_constraintEnd_toEndOf="@id/constraint"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="110dp"
                 android:layout_marginEnd="80dp" />
 
             <ImageView
@@ -119,10 +122,9 @@
                 android:layout_height="140dp"
                 android:src="@drawable/island"
                 app:layout_constraintTop_toBottomOf="@id/island9"
-                app:layout_constraintBottom_toBottomOf="@id/constraint"
                 app:layout_constraintStart_toStartOf="@id/constraint"
-                android:layout_marginTop="50dp"
-                android:layout_marginStart="150dp" />
+                android:layout_marginTop="110dp"
+                android:layout_marginStart="130dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -131,7 +133,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/test_sky"
+        android:src="@drawable/sky"
         app:layout_constraintTop_toTopOf="@id/constt"
         android:scaleType="fitXY"/>
 

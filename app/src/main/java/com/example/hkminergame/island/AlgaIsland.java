@@ -20,12 +20,13 @@ public class AlgaIsland extends AppCompatActivity{
     int x = 0;
     Timer timer;
     boolean up = false;
+    private final int ELEV_ID = R.id.elevator;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.island_alga);
 
-        elevator_img = findViewById(R.id.elevator);
+        elevator_img = findViewById(ELEV_ID);
 
         array_layout = new ArrayList<>();
         layout = findViewById(R.id.constraint_principal);
@@ -50,17 +51,17 @@ public class AlgaIsland extends AppCompatActivity{
                     @Override
                     public void run() {
                         if (x == 0 && !up) {
-                            elevator.destruct(R.id.elevator);
-                            elevator.move_y(R.id.elevator, R.id.constraint0);
+                            elevator.destruct(ELEV_ID);
+                            elevator.move_y(ELEV_ID, R.id.constraint0);
                         } else if (x == 0) {
-                            elevator.depose(R.id.elevator);
+                            elevator.depose(ELEV_ID);
                             up = !up;
                         }
                         if (!up) {
-                            elevator.move_y(R.id.elevator, array_layout.get(x));
+                            elevator.move_y(ELEV_ID, array_layout.get(x));
                             x++;
                         } else {
-                            elevator.move_y(R.id.elevator, array_layout.get(x));
+                            elevator.move_y(ELEV_ID, array_layout.get(x));
                             x--;
                         }
                         if (x == array_layout.size() - 1) {

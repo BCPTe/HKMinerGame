@@ -69,8 +69,8 @@ public class LevelActivity extends AppCompatActivity {
             for (int j = 1; j < 100; j++) {
                 if (position.get(indexOfIsland)[1] > (size.y / 100) * j && position.get(indexOfIsland)[1] < (size.y / 100) * (j + 1)) {
                     params = (ConstraintLayout.LayoutParams) island.getLayoutParams();
-                    params.width = ((size.y / 100) * j) / 7;
-                    params.height = ((size.y / 100) * j) / 7;
+                    params.width = ((size.y / 100) * j) / 6;
+                    params.height = ((size.y / 100) * j) / 6;
                     island.setLayoutParams(params);
                     break;
                 }
@@ -78,11 +78,11 @@ public class LevelActivity extends AppCompatActivity {
         }
 
         for(ImageView island : arrayisland){
-            if(arrayisland.indexOf(island)<4)
+            if(arrayisland.indexOf(island)<3)
                 continue;
             params = (ConstraintLayout.LayoutParams) island.getLayoutParams();
-            params.width = ((size.y/100)*99)/7;
-            params.height = ((size.y/100)*99)/7;
+            params.width = ((size.y/100)*99)/6;
+            params.height = ((size.y/100)*99)/6;
             island.setLayoutParams(params);
         }
 
@@ -99,8 +99,8 @@ public class LevelActivity extends AppCompatActivity {
                             for (int j = 1; j < 100; j++) {
                                 if (position.get(indexOfIsland)[1] > (size.y / 100) * j && position.get(indexOfIsland)[1] < (size.y / 100) * (j + 1)) {
                                     ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) island.getLayoutParams();
-                                    params.width = ((size.y/100)*j)/7;
-                                    params.height = ((size.y/100)*j)/7;
+                                    params.width = ((size.y/100)*j)/6;
+                                    params.height = ((size.y/100)*j)/6;
                                     island.setLayoutParams(params);
                                     break;
                                 }
