@@ -1,6 +1,5 @@
 package com.example.hkminergame;
 
-import android.transition.Transition;
 import android.transition.TransitionManager;
 import android.widget.ImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -19,8 +18,20 @@ public class Elevator {
     }
 
     public void move_y(int id_elevator, int id_level2){
-        constraint.connect(id_elevator, ConstraintSet.BOTTOM, id_level2, ConstraintSet.TOP);
+        constraint.connect(id_elevator, ConstraintSet.TOP, id_level2, ConstraintSet.TOP);
         constraint.connect(id_elevator, ConstraintSet.END, id_level2, ConstraintSet.START);
+        constraint.applyTo(layout);
+        TransitionManager.beginDelayedTransition(layout);
+    }
+
+    public void destruct(int id_elevator){
+        constraint.clear(id_elevator, ConstraintSet.BOTTOM);
+        constraint.applyTo(layout);
+        TransitionManager.beginDelayedTransition(layout);
+    }
+
+    public void depose(int id_elevator){
+        constraint.clear(id_elevator, ConstraintSet.TOP);
         constraint.applyTo(layout);
         TransitionManager.beginDelayedTransition(layout);
     }

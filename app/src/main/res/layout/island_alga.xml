@@ -20,15 +20,15 @@
                 android:layout_width="80dp"
                 android:layout_height="70dp"
                 android:scaleType="fitXY"
-                app:layout_constraintBottom_toTopOf="@id/constraint"
-                app:layout_constraintEnd_toStartOf="@id/constraint"
+                app:layout_constraintBottom_toTopOf="@id/constraint0"
+                app:layout_constraintEnd_toStartOf="@id/constraint0"
                 android:layout_marginEnd="30dp"
                 android:layout_marginBottom="40dp"
                 android:src="@drawable/rect"/>
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraint"
+                android:id="@+id/constraint0"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 app:layout_constraintTop_toTopOf="@id/constraint_principal"
@@ -43,8 +43,8 @@
                     android:contentDescription="@string/level_background"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:layout_constraintTop_toTopOf="@id/constraint"
-                    app:layout_constraintEnd_toEndOf="@id/constraint"
+                    app:layout_constraintTop_toTopOf="@id/constraint0"
+                    app:layout_constraintEnd_toEndOf="@id/constraint0"
                     android:scaleType="fitXY"
                     android:src="@drawable/rect" />
 
@@ -54,7 +54,7 @@
                 android:id="@+id/constraint1"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                app:layout_constraintTop_toBottomOf="@id/constraint"
+                app:layout_constraintTop_toBottomOf="@id/constraint0"
                 android:layout_marginStart="140dp"
                 android:layout_marginEnd="30dp"
                 android:layout_marginTop="20dp">

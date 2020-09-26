@@ -10,26 +10,28 @@ import com.example.hkminergame.Elevator;
 import com.example.hkminergame.R;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class AlgaIsland extends AppCompatActivity{
+    final int FPS = 40;
     Elevator elevator;
-    ImageView elevator_img, test, test1;
-    ConstraintLayout layout, layout1, layout2, layout3, layout4, layout5, layout6, layout7, layout8, layout9;
+    ImageView elevator_img;
+    ConstraintLayout layout;
     ArrayList<Integer> array_layout;
     int x = 0;
+    Timer timer;
+    boolean up = false;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.island_alga);
 
         elevator_img = findViewById(R.id.elevator);
-        test = findViewById(R.id.level1);
-        test.setOnClickListener(clicklistener);
-        test1 = findViewById(R.id.level2);
 
         array_layout = new ArrayList<>();
         layout = findViewById(R.id.constraint_principal);
-        array_layout.add(R.id.constraint);
+        array_layout.add(R.id.constraint0);
         array_layout.add(R.id.constraint1);
         array_layout.add(R.id.constraint2);
         array_layout.add(R.id.constraint3);
@@ -38,7 +40,39 @@ public class AlgaIsland extends AppCompatActivity{
         array_layout.add(R.id.constraint6);
         array_layout.add(R.id.constraint7);
         array_layout.add(R.id.constraint8);
+        array_layout.add(R.id.constraint9);
         elevator = new Elevator(elevator_img, layout);
+
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if(x == 0 && !up){
+                            elevator.destruct(R.id.elevator);
+                            elevator.move_y(R.id.elevator, R.id.constraint0);
+                        }
+                        else if(x == 0 && up){
+                            elevator.depose(R.id.elevator);
+                            up = !up;
+                        }
+                        if(!up){
+                            x++;
+                            elevator.move_y(R.id.elevator, array_layout.get(x));
+                        }
+                        else if(up){
+                            x--;
+                            elevator.move_y(R.id.elevator, array_layout.get(x));
+                        }
+                        if(x == array_layout.size()-1){
+                            up = !up;
+                        }
+                    }
+                });
+            }
+        },0,500);
     }
 
     @Override
@@ -53,13 +87,4 @@ public class AlgaIsland extends AppCompatActivity{
                             | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         }
     }
-
-    ImageView.OnClickListener clicklistener =
-            new ImageView.OnClickListener(){
-                @Override
-                public void onClick(View view) {
-                    elevator.move_y(R.id.elevator, array_layout.get(x));
-                    x++;
-                }
-            };
 }
