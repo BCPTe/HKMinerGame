@@ -12,7 +12,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class AlgaIsland extends AppCompatActivity{
-    final int FPS = 500;
+    final int FPS = 1500;
     Elevator elevator;
     ImageView elevator_img;
     ConstraintLayout layout;
@@ -20,13 +20,12 @@ public class AlgaIsland extends AppCompatActivity{
     int x = 0;
     Timer timer;
     boolean up = false;
-    private final int ELEV_ID = R.id.elevator;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.island_alga);
 
-        elevator_img = findViewById(ELEV_ID);
+        elevator_img = findViewById(R.id.elevator);
 
         array_layout = new ArrayList<>();
         layout = findViewById(R.id.constraint_principal);
@@ -50,18 +49,21 @@ public class AlgaIsland extends AppCompatActivity{
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        if (x == 0 && !up) {
-                            elevator.destruct(ELEV_ID);
-                            elevator.move_y(ELEV_ID, R.id.constraint0);
-                        } else if (x == 0) {
-                            elevator.depose(ELEV_ID);
-                            up = !up;
+                        if (x == 0) {
+                            if(!up) {
+                                elevator.destruct(R.id.elevator);
+                                elevator.move_y(R.id.elevator, R.id.constraint0);
+                            }
+                            else{
+                                elevator.depose(R.id.elevator);
+                                up = !up;
+                            }
                         }
                         if (!up) {
-                            elevator.move_y(ELEV_ID, array_layout.get(x));
+                            elevator.move_y(R.id.elevator, array_layout.get(x));
                             x++;
                         } else {
-                            elevator.move_y(ELEV_ID, array_layout.get(x));
+                            elevator.move_y(R.id.elevator, array_layout.get(x));
                             x--;
                         }
                         if (x == array_layout.size() - 1) {

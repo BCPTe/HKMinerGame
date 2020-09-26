@@ -31,6 +31,136 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + "ice numeric);";
         db.execSQL(create_table_amount);
 
+        String create_table_amountAlga = "create table AmountAlga("
+                + "level1 numeric,"
+                + "level2 numeric,"
+                + "level3 numeric,"
+                + "level4 numeric,"
+                + "level5 numeric,"
+                + "level6 numeric,"
+                + "level7 numeric,"
+                + "level8 numeric,"
+                + "level9 numeric,"
+                + "level10 numeric);";
+        db.execSQL(create_table_amountAlga);
+
+        String create_table_amountSand = "create table AmountSand("
+                + "level1 numeric,"
+                + "level2 numeric,"
+                + "level3 numeric,"
+                + "level4 numeric,"
+                + "level5 numeric,"
+                + "level6 numeric,"
+                + "level7 numeric,"
+                + "level8 numeric,"
+                + "level9 numeric,"
+                + "level10 numeric);";
+        db.execSQL(create_table_amountSand);
+
+        String create_table_amountStone = "create table AmountStone("
+                + "level1 numeric,"
+                + "level2 numeric,"
+                + "level3 numeric,"
+                + "level4 numeric,"
+                + "level5 numeric,"
+                + "level6 numeric,"
+                + "level7 numeric,"
+                + "level8 numeric,"
+                + "level9 numeric,"
+                + "level10 numeric);";
+        db.execSQL(create_table_amountStone);
+
+        String create_table_amountWood = "create table AmountWood("
+                + "level1 numeric,"
+                + "level2 numeric,"
+                + "level3 numeric,"
+                + "level4 numeric,"
+                + "level5 numeric,"
+                + "level6 numeric,"
+                + "level7 numeric,"
+                + "level8 numeric,"
+                + "level9 numeric,"
+                + "level10 numeric);";
+        db.execSQL(create_table_amountWood);
+
+        String create_table_amountCoral = "create table AmountCoral("
+                + "level1 numeric,"
+                + "level2 numeric,"
+                + "level3 numeric,"
+                + "level4 numeric,"
+                + "level5 numeric,"
+                + "level6 numeric,"
+                + "level7 numeric,"
+                + "level8 numeric,"
+                + "level9 numeric,"
+                + "level10 numeric);";
+        db.execSQL(create_table_amountCoral);
+
+        String create_table_amountPlastic = "create table AmountPlastic("
+                + "level1 numeric,"
+                + "level2 numeric,"
+                + "level3 numeric,"
+                + "level4 numeric,"
+                + "level5 numeric,"
+                + "level6 numeric,"
+                + "level7 numeric,"
+                + "level8 numeric,"
+                + "level9 numeric,"
+                + "level10 numeric);";
+        db.execSQL(create_table_amountPlastic);
+
+        String create_table_amountCoal = "create table AmountCoal("
+                + "level1 numeric,"
+                + "level2 numeric,"
+                + "level3 numeric,"
+                + "level4 numeric,"
+                + "level5 numeric,"
+                + "level6 numeric,"
+                + "level7 numeric,"
+                + "level8 numeric,"
+                + "level9 numeric,"
+                + "level10 numeric);";
+        db.execSQL(create_table_amountCoal);
+
+        String create_table_amountGold = "create table AmountGold("
+                + "level1 numeric,"
+                + "level2 numeric,"
+                + "level3 numeric,"
+                + "level4 numeric,"
+                + "level5 numeric,"
+                + "level6 numeric,"
+                + "level7 numeric,"
+                + "level8 numeric,"
+                + "level9 numeric,"
+                + "level10 numeric);";
+        db.execSQL(create_table_amountGold);
+
+        String create_table_amountGas = "create table AmountGas("
+                + "level1 numeric,"
+                + "level2 numeric,"
+                + "level3 numeric,"
+                + "level4 numeric,"
+                + "level5 numeric,"
+                + "level6 numeric,"
+                + "level7 numeric,"
+                + "level8 numeric,"
+                + "level9 numeric,"
+                + "level10 numeric);";
+        db.execSQL(create_table_amountGas);
+
+        String create_table_amountIce = "create table AmountIce("
+                + "level1 numeric,"
+                + "level2 numeric,"
+                + "level3 numeric,"
+                + "level4 numeric,"
+                + "level5 numeric,"
+                + "level6 numeric,"
+                + "level7 numeric,"
+                + "level8 numeric,"
+                + "level9 numeric,"
+                + "level10 numeric);";
+        db.execSQL(create_table_amountIce);
+
         String create_table_locklevel = "create table LockLevel("
                 + "alga int,"
                 + "sand int,"
