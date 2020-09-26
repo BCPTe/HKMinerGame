@@ -27,7 +27,6 @@ public class Elevator {
     public void destruct(int id_elevator){
         constraint.clear(id_elevator, ConstraintSet.BOTTOM);
         constraint.applyTo(layout);
-        TransitionManager.beginDelayedTransition(layout);
     }
 
     public void depose(int id_elevator){

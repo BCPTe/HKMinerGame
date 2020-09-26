@@ -5,16 +5,14 @@ import android.view.View;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
 import com.example.hkminergame.Elevator;
 import com.example.hkminergame.R;
-
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class AlgaIsland extends AppCompatActivity{
-    final int FPS = 40;
+    final int FPS = 500;
     Elevator elevator;
     ImageView elevator_img;
     ConstraintLayout layout;
@@ -31,6 +29,7 @@ public class AlgaIsland extends AppCompatActivity{
 
         array_layout = new ArrayList<>();
         layout = findViewById(R.id.constraint_principal);
+        array_layout.add(R.id.storage);
         array_layout.add(R.id.constraint0);
         array_layout.add(R.id.constraint1);
         array_layout.add(R.id.constraint2);
@@ -50,29 +49,27 @@ public class AlgaIsland extends AppCompatActivity{
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        if(x == 0 && !up){
+                        if (x == 0 && !up) {
                             elevator.destruct(R.id.elevator);
                             elevator.move_y(R.id.elevator, R.id.constraint0);
-                        }
-                        else if(x == 0 && up){
+                        } else if (x == 0) {
                             elevator.depose(R.id.elevator);
                             up = !up;
                         }
-                        if(!up){
+                        if (!up) {
+                            elevator.move_y(R.id.elevator, array_layout.get(x));
                             x++;
+                        } else {
                             elevator.move_y(R.id.elevator, array_layout.get(x));
-                        }
-                        else if(up){
                             x--;
-                            elevator.move_y(R.id.elevator, array_layout.get(x));
                         }
-                        if(x == array_layout.size()-1){
+                        if (x == array_layout.size() - 1) {
                             up = !up;
                         }
                     }
                 });
             }
-        },0,500);
+        },0,FPS);
     }
 
     @Override
