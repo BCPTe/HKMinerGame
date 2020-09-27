@@ -161,7 +161,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + "level10 numeric);";
         db.execSQL(create_table_amountIce);
 
-        String create_table_locklevel = "create table LockLevel("
+        String create_table_lockisland = "create table LockIsland("
                 + "alga int,"
                 + "sand int,"
                 + "stone int,"
@@ -172,20 +172,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + "gold int,"
                 + "gas int,"
                 + "ice int);";
-        db.execSQL(create_table_locklevel);
-
-        String create_table_lockplanet = "create table LockPlanet("
-                + "alga int,"
-                + "sand int,"
-                + "stone int,"
-                + "wood int,"
-                + "coal int,"
-                + "plastic int,"
-                + "coral int,"
-                + "gold int,"
-                + "gas int,"
-                + "ice int);";
-        db.execSQL(create_table_lockplanet);
+        db.execSQL(create_table_lockisland);
 
         String create_table_nickname = "create table NickName("
                 + "nick varchar(15));";

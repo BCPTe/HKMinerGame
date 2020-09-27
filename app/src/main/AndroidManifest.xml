@@ -25,51 +25,70 @@
 
         <activity android:name=".LevelActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"/>
 
         <activity android:name=".SettingsActivity"
             android:theme="@style/Theme.AppCompat.Translucent"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".island.AlgaIsland"
+        <activity android:name=".FirstActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait" />
+
+        <activity android:name=".AmountActivity"
+            android:theme="@style/Theme.AppCompat.Translucent"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".island.AlgaIsland"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"/>
 
         <activity android:name=".island.CoalIsland"
             android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"/>
 
         <activity android:name=".island.CoralIsland"
             android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"/>
 
         <activity android:name=".island.GasIsland"
             android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"/>
 
         <activity android:name=".island.GoldIsland"
             android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"/>
 
         <activity android:name=".island.IceIsland"
             android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"/>
 
         <activity android:name=".island.PlasticIsland"
             android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"/>
 
         <activity android:name=".island.SandIsland"
             android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"/>
 
         <activity android:name=".island.StoneIsland"
             android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"/>
 
         <activity android:name=".island.WoodIsland"
             android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"/>
 
     </application>
 

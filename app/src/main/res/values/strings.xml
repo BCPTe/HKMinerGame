@@ -3,4 +3,5 @@
     <string name="splash_background">Splash Background</string>
     <string name="pb_background">Progress Bar Background</string>
     <string name="level_background"> Level Background"</string>
+    <string name="default_value_resources">0</string>
 </resources>

@@ -15,6 +15,36 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <ImageButton
+            android:id="@+id/map_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toTopOf="@id/constraint_principal"
+            app:layout_constraintEnd_toEndOf="@id/constraint_principal"
+            android:layout_margin="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/exit_button" />
+
+            <ImageButton
+                android:id="@+id/settings_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintTop_toTopOf="@id/constraint_principal"
+                app:layout_constraintEnd_toStartOf="@id/map_button"
+                android:layout_margin="20dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/settings_button" />
+
+            <ImageButton
+                android:id="@+id/amount_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintTop_toTopOf="@id/constraint_principal"
+                app:layout_constraintStart_toStartOf="@id/constraint_principal"
+                android:layout_margin="20dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/menu_button" />
+
             <ImageView
                 android:id="@+id/elevator"
                 android:layout_width="80dp"

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/bg_settings"
+        android:layout_width="300dp"
+        android:layout_height="600dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/resources_background"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_principal"
+        android:layout_width="300dp"
+        android:layout_height="600dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:backgroundTint="@android:color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint0"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toTopOf="@id/constraint_principal"
+            app:layout_constraintStart_toStartOf="@id/constraint_principal"
+            app:layout_constraintEnd_toEndOf="@id/constraint_principal"
+            android:layout_marginTop="100dp"
+            android:backgroundTint="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/img_alga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/constraint0"
+                app:layout_constraintBottom_toBottomOf="@id/constraint0"
+                app:layout_constraintTop_toTopOf="@id/constraint0"
+                android:src="@drawable/island"
+                android:backgroundTint="@android:color/transparent"/>
+
+            <TextView
+                android:id="@+id/text_alga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/constraint0"
+                app:layout_constraintStart_toEndOf="@id/img_alga"
+                app:layout_constraintBottom_toBottomOf="@id/constraint0"
+                app:layout_constraintTop_toTopOf="@id/constraint0"
+                android:text="@string/default_value_resources"
+                android:fontFamily="@font/komix_eighties"
+                android:backgroundTint="@android:color/transparent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/constraint0"
+            app:layout_constraintStart_toStartOf="@id/constraint_principal"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/img_sand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/constraint1"
+                app:layout_constraintBottom_toBottomOf="@id/constraint1"
+                app:layout_constraintTop_toTopOf="@id/constraint1"
+                android:src="@drawable/island"
+                android:backgroundTint="@android:color/transparent"/>
+
+            <TextView
+                android:id="@+id/text_sand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/constraint1"
+                app:layout_constraintStart_toEndOf="@id/img_sand"
+                app:layout_constraintBottom_toBottomOf="@id/constraint1"
+                app:layout_constraintTop_toTopOf="@id/constraint1"
+                android:text="@string/default_value_resources"
+                android:fontFamily="@font/komix_eighties"
+                android:backgroundTint="@android:color/transparent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/constraint1"
+            app:layout_constraintStart_toStartOf="@id/constraint_principal"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/img_stone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/constraint2"
+                app:layout_constraintBottom_toBottomOf="@id/constraint2"
+                app:layout_constraintTop_toTopOf="@id/constraint2"
+                android:src="@drawable/island"
+                android:backgroundTint="@android:color/transparent"/>
+
+            <TextView
+                android:id="@+id/text_stone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/constraint2"
+                app:layout_constraintStart_toEndOf="@id/img_stone"
+                app:layout_constraintBottom_toBottomOf="@id/constraint2"
+                app:layout_constraintTop_toTopOf="@id/constraint2"
+                android:text="@string/default_value_resources"
+                android:fontFamily="@font/komix_eighties"
+                android:backgroundTint="@android:color/transparent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint3"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/constraint2"
+            app:layout_constraintStart_toStartOf="@id/constraint_principal"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/img_wood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/constraint3"
+                app:layout_constraintBottom_toBottomOf="@id/constraint3"
+                app:layout_constraintTop_toTopOf="@id/constraint3"
+                android:src="@drawable/island"
+                android:backgroundTint="@android:color/transparent"/>
+
+            <TextView
+                android:id="@+id/text_wood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/constraint3"
+                app:layout_constraintStart_toEndOf="@id/img_wood"
+                app:layout_constraintBottom_toBottomOf="@id/constraint3"
+                app:layout_constraintTop_toTopOf="@id/constraint3"
+                android:text="@string/default_value_resources"
+                android:fontFamily="@font/komix_eighties"
+                android:backgroundTint="@android:color/transparent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint4"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/constraint3"
+            app:layout_constraintStart_toStartOf="@id/constraint_principal"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/img_coal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/constraint4"
+                app:layout_constraintBottom_toBottomOf="@id/constraint4"
+                app:layout_constraintTop_toTopOf="@id/constraint4"
+                android:src="@drawable/island"
+                android:backgroundTint="@android:color/transparent"/>
+
+            <TextView
+                android:id="@+id/text_coal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/constraint4"
+                app:layout_constraintStart_toEndOf="@id/img_coal"
+                app:layout_constraintBottom_toBottomOf="@id/constraint4"
+                app:layout_constraintTop_toTopOf="@id/constraint4"
+                android:text="@string/default_value_resources"
+                android:fontFamily="@font/komix_eighties"
+                android:backgroundTint="@android:color/transparent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint5"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/constraint4"
+            app:layout_constraintStart_toStartOf="@id/constraint_principal"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/img_plastic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/constraint5"
+                app:layout_constraintBottom_toBottomOf="@id/constraint5"
+                app:layout_constraintTop_toTopOf="@id/constraint5"
+                android:src="@drawable/island"
+                android:backgroundTint="@android:color/transparent"/>
+
+            <TextView
+                android:id="@+id/text_plastic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/constraint5"
+                app:layout_constraintStart_toEndOf="@id/img_plastic"
+                app:layout_constraintBottom_toBottomOf="@id/constraint5"
+                app:layout_constraintTop_toTopOf="@id/constraint5"
+                android:text="@string/default_value_resources"
+                android:fontFamily="@font/komix_eighties"
+                android:backgroundTint="@android:color/transparent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint6"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/constraint5"
+            app:layout_constraintStart_toStartOf="@id/constraint_principal"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/img_coral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/constraint6"
+                app:layout_constraintBottom_toBottomOf="@id/constraint6"
+                app:layout_constraintTop_toTopOf="@id/constraint6"
+                android:src="@drawable/island"
+                android:backgroundTint="@android:color/transparent"/>
+
+            <TextView
+                android:id="@+id/text_coral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/constraint6"
+                app:layout_constraintStart_toEndOf="@id/img_coral"
+                app:layout_constraintBottom_toBottomOf="@id/constraint6"
+                app:layout_constraintTop_toTopOf="@id/constraint6"
+                android:text="@string/default_value_resources"
+                android:fontFamily="@font/komix_eighties"
+                android:backgroundTint="@android:color/transparent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint7"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/constraint6"
+            app:layout_constraintStart_toStartOf="@id/constraint_principal"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/img_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/constraint7"
+                app:layout_constraintBottom_toBottomOf="@id/constraint7"
+                app:layout_constraintTop_toTopOf="@id/constraint7"
+                android:src="@drawable/island"
+                android:backgroundTint="@android:color/transparent"/>
+
+            <TextView
+                android:id="@+id/text_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/constraint7"
+                app:layout_constraintStart_toEndOf="@id/img_gold"
+                app:layout_constraintBottom_toBottomOf="@id/constraint7"
+                app:layout_constraintTop_toTopOf="@id/constraint7"
+                android:text="@string/default_value_resources"
+                android:fontFamily="@font/komix_eighties"
+                android:backgroundTint="@android:color/transparent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint8"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/constraint7"
+            app:layout_constraintStart_toStartOf="@id/constraint_principal"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/img_gas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/constraint8"
+                app:layout_constraintBottom_toBottomOf="@id/constraint8"
+                app:layout_constraintTop_toTopOf="@id/constraint8"
+                android:src="@drawable/island"
+                android:backgroundTint="@android:color/transparent"/>
+
+            <TextView
+                android:id="@+id/text_gas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/constraint8"
+                app:layout_constraintStart_toEndOf="@id/img_gas"
+                app:layout_constraintBottom_toBottomOf="@id/constraint8"
+                app:layout_constraintTop_toTopOf="@id/constraint8"
+                android:text="@string/default_value_resources"
+                android:fontFamily="@font/komix_eighties"
+                android:backgroundTint="@android:color/transparent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint9"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/constraint8"
+            app:layout_constraintStart_toStartOf="@id/constraint_principal"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/img_ice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/constraint9"
+                app:layout_constraintBottom_toBottomOf="@id/constraint9"
+                app:layout_constraintTop_toTopOf="@id/constraint9"
+                android:src="@drawable/island"
+                android:backgroundTint="@android:color/transparent"/>
+
+            <TextView
+                android:id="@+id/text_ice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/constraint9"
+                app:layout_constraintStart_toEndOf="@id/img_ice"
+                app:layout_constraintBottom_toBottomOf="@id/constraint9"
+                app:layout_constraintTop_toTopOf="@id/constraint9"
+                android:text="@string/default_value_resources"
+                android:fontFamily="@font/komix_eighties"
+                android:backgroundTint="@android:color/transparent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/exit_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@id/bg_settings"
+        android:translationY="-20dp"
+        android:background="@drawable/exit_button" />
+
+</RelativeLayout>

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.app.ActivityManagerCompat;
 import androidx.core.widget.NestedScrollView;
 import java.util.ArrayList;
 import java.util.Timer;
@@ -153,7 +154,6 @@ public class LevelActivity extends AppCompatActivity {
                     Intent intent = new Intent(LevelActivity.this, AlgaIsland.class);
                     startActivity(intent);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                    finish();
                 }
             };
 
@@ -164,7 +164,6 @@ public class LevelActivity extends AppCompatActivity {
                     Intent intent = new Intent(LevelActivity.this, SandIsland.class);
                     startActivity(intent);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                    finish();
                 }
             };
 
@@ -175,7 +174,6 @@ public class LevelActivity extends AppCompatActivity {
                     Intent intent = new Intent(LevelActivity.this, StoneIsland.class);
                     startActivity(intent);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                    finish();
                 }
             };
 
@@ -186,7 +184,6 @@ public class LevelActivity extends AppCompatActivity {
                     Intent intent = new Intent(LevelActivity.this, WoodIsland.class);
                     startActivity(intent);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                    finish();
                 }
             };
 
@@ -197,7 +194,6 @@ public class LevelActivity extends AppCompatActivity {
                     Intent intent = new Intent(LevelActivity.this, CoalIsland.class);
                     startActivity(intent);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                    finish();
                 }
             };
 
@@ -208,7 +204,6 @@ public class LevelActivity extends AppCompatActivity {
                     Intent intent = new Intent(LevelActivity.this, PlasticIsland.class);
                     startActivity(intent);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                    finish();
                 }
             };
 
@@ -219,7 +214,6 @@ public class LevelActivity extends AppCompatActivity {
                     Intent intent = new Intent(LevelActivity.this, CoralIsland.class);
                     startActivity(intent);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                    finish();
                 }
             };
 
@@ -230,7 +224,6 @@ public class LevelActivity extends AppCompatActivity {
                     Intent intent = new Intent(LevelActivity.this, GoldIsland.class);
                     startActivity(intent);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                    finish();
                 }
             };
 
@@ -241,7 +234,6 @@ public class LevelActivity extends AppCompatActivity {
                     Intent intent = new Intent(LevelActivity.this, GasIsland.class);
                     startActivity(intent);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                    finish();
                 }
             };
 
@@ -252,7 +244,6 @@ public class LevelActivity extends AppCompatActivity {
                     Intent intent = new Intent(LevelActivity.this, IceIsland.class);
                     startActivity(intent);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                    finish();
                 }
             };
 }

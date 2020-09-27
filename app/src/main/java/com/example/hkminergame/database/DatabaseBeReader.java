@@ -279,29 +279,8 @@ public class DatabaseBeReader {
         }
     }
 
-    public void insertLocklevel(int alga,int sand,int stone,int wood,int coal,int plastic,int coral,int gold,int gas,int ice){
-        ContentValues cv = new ContentValues();
-        cv.put("alga", alga);
-        cv.put("sand", sand);
-        cv.put("stone", stone);
-        cv.put("wood", wood);
-        cv.put("coal", coal);
-        cv.put("plastic", plastic);
-        cv.put("coral", coral);
-        cv.put("gold", gold);
-        cv.put("gas", gas);
-        cv.put("ice", ice);
-      
-        try {
-            mDb.insertOrThrow("LockLevel", null, cv);
-        } catch (SQLiteException e) {
-            Log.d("HKGame", "Exception: " + Log.getStackTraceString(e));
-            throw new SQLiteException();
-        }
-    }
 
-
-       public void insertLockPlanet(int alga,int sand,int stone,int wood,int coal,int plastic,int coral,int gold,int gas,int ice){
+       public void insertLockIsland(int alga,int sand,int stone,int wood,int coal,int plastic,int coral,int gold,int gas,int ice){
            ContentValues cv = new ContentValues();
            cv.put("alga", alga);
            cv.put("sand", sand);
@@ -315,7 +294,7 @@ public class DatabaseBeReader {
            cv.put("ice", ice);
 
         try {
-            mDb.insertOrThrow("LockPlanet", null, cv);
+            mDb.insertOrThrow("LockIsland", null, cv);
         } catch (SQLiteException e) {
             Log.d("HKGame", "Exception: " + Log.getStackTraceString(e));
             throw new SQLiteException();

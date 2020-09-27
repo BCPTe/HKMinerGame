@@ -1,12 +1,20 @@
 package com.example.hkminergame.island;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.example.hkminergame.AmountActivity;
 import com.example.hkminergame.Elevator;
+import com.example.hkminergame.LevelActivity;
+import com.example.hkminergame.MainActivity;
 import com.example.hkminergame.R;
+import com.example.hkminergame.SettingsActivity;
+
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -16,7 +24,9 @@ public class AlgaIsland extends AppCompatActivity{
     Elevator elevator;
     ImageView elevator_img;
     ConstraintLayout layout;
+    ImageButton settings, amount, map;
     ArrayList<Integer> array_layout;
+    Bundle saved;
     int x = 0;
     Timer timer;
     boolean up = false;
@@ -26,6 +36,13 @@ public class AlgaIsland extends AppCompatActivity{
         setContentView(R.layout.island_alga);
 
         elevator_img = findViewById(R.id.elevator);
+        map = findViewById(R.id.map_button);
+        map.setOnClickListener(map_button_listener);
+        amount = findViewById(R.id.amount_button);
+        amount.setOnClickListener(amount_button_listener);
+        settings = findViewById(R.id.settings_button);
+        settings.setOnClickListener(settings_button_listener);
+
 
         array_layout = new ArrayList<>();
         layout = findViewById(R.id.constraint_principal);
@@ -87,4 +104,34 @@ public class AlgaIsland extends AppCompatActivity{
                             | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         }
     }
+
+    private ImageButton.OnClickListener map_button_listener =
+            new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(AlgaIsland.this, LevelActivity.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                }
+            };
+
+    private ImageButton.OnClickListener settings_button_listener =
+            new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(AlgaIsland.this, SettingsActivity.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                }
+            };
+
+    private ImageButton.OnClickListener amount_button_listener =
+            new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(AlgaIsland.this, AmountActivity.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                }
+            };
 }
