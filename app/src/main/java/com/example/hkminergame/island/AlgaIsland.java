@@ -1,6 +1,7 @@
 package com.example.hkminergame.island;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -14,6 +15,7 @@ import com.example.hkminergame.LevelActivity;
 import com.example.hkminergame.MainActivity;
 import com.example.hkminergame.R;
 import com.example.hkminergame.SettingsActivity;
+import com.example.hkminergame.database.DatabaseBeReader;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -59,6 +61,7 @@ public class AlgaIsland extends AppCompatActivity{
         array_layout.add(R.id.constraint9);
         elevator = new Elevator(elevator_img, layout);
 
+
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -83,7 +86,7 @@ public class AlgaIsland extends AppCompatActivity{
                             elevator.move_y(R.id.elevator, array_layout.get(x));
                             x--;
                         }
-                        if (x == array_layout.size() - 1) {
+                        if (x == array_layout.size()-1) {
                             up = !up;
                         }
                     }

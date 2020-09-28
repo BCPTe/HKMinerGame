@@ -41,6 +41,16 @@ public class MainActivity extends AppCompatActivity {
             db.insertAmountGas(zero,zero,zero,zero,zero,zero,zero,zero,zero,zero);
             db.insertAmountIce(zero,zero,zero,zero,zero,zero,zero,zero,zero,zero);
             db.insertLockIsland(0,0,0,0,0,0,0,0,0,0);
+            db.insertLockAlga(1,1,1,1,1,1,0,0,0,0);
+            db.insertLockSand(0,0,0,0,0,0,0,0,0,0);
+            db.insertLockStone(0,0,0,0,0,0,0,0,0,0);
+            db.insertLockWood(0,0,0,0,0,0,0,0,0,0);
+            db.insertLockCoal(0,0,0,0,0,0,0,0,0,0);
+            db.insertLockPlastic(0,0,0,0,0,0,0,0,0,0);
+            db.insertLockCoral(0,0,0,0,0,0,0,0,0,0);
+            db.insertLockGold(0,0,0,0,0,0,0,0,0,0);
+            db.insertLockGas(0,0,0,0,0,0,0,0,0,0);
+            db.insertLockIce(0,0,0,0,0,0,0,0,0,0);
             startActivity(firstactivity);
             db.close();
             finish();

@@ -301,6 +301,216 @@ public class DatabaseBeReader {
         }
     }
 
+    public void insertLockAlga(int level1,int level2,int level3,int level4,int level5,int level6,int level7,int level8,int level9,int level10){
+        ContentValues cv = new ContentValues();
+        cv.put("level1", level1);
+        cv.put("level2", level2);
+        cv.put("level3", level3);
+        cv.put("level4", level4);
+        cv.put("level5", level5);
+        cv.put("level6", level6);
+        cv.put("level7", level7);
+        cv.put("level8", level8);
+        cv.put("level9", level9);
+        cv.put("level10", level10);
+
+        try {
+            mDb.insertOrThrow("LockAlga", null, cv);
+        } catch (SQLiteException e) {
+            Log.d("HKGame", "Exception: " + Log.getStackTraceString(e));
+            throw new SQLiteException();
+        }
+    }
+
+    public void insertLockSand(int level1,int level2,int level3,int level4,int level5,int level6,int level7,int level8,int level9,int level10){
+        ContentValues cv = new ContentValues();
+        cv.put("level1", level1);
+        cv.put("level2", level2);
+        cv.put("level3", level3);
+        cv.put("level4", level4);
+        cv.put("level5", level5);
+        cv.put("level6", level6);
+        cv.put("level7", level7);
+        cv.put("level8", level8);
+        cv.put("level9", level9);
+        cv.put("level10", level10);
+
+        try {
+            mDb.insertOrThrow("LockSand", null, cv);
+        } catch (SQLiteException e) {
+            Log.d("HKGame", "Exception: " + Log.getStackTraceString(e));
+            throw new SQLiteException();
+        }
+    }
+
+    public void insertLockStone(int level1,int level2,int level3,int level4,int level5,int level6,int level7,int level8,int level9,int level10){
+        ContentValues cv = new ContentValues();
+        cv.put("level1", level1);
+        cv.put("level2", level2);
+        cv.put("level3", level3);
+        cv.put("level4", level4);
+        cv.put("level5", level5);
+        cv.put("level6", level6);
+        cv.put("level7", level7);
+        cv.put("level8", level8);
+        cv.put("level9", level9);
+        cv.put("level10", level10);
+
+        try {
+            mDb.insertOrThrow("LockStone", null, cv);
+        } catch (SQLiteException e) {
+            Log.d("HKGame", "Exception: " + Log.getStackTraceString(e));
+            throw new SQLiteException();
+        }
+    }
+
+    public void insertLockWood(int level1,int level2,int level3,int level4,int level5,int level6,int level7,int level8,int level9,int level10){
+        ContentValues cv = new ContentValues();
+        cv.put("level1", level1);
+        cv.put("level2", level2);
+        cv.put("level3", level3);
+        cv.put("level4", level4);
+        cv.put("level5", level5);
+        cv.put("level6", level6);
+        cv.put("level7", level7);
+        cv.put("level8", level8);
+        cv.put("level9", level9);
+        cv.put("level10", level10);
+
+        try {
+            mDb.insertOrThrow("LockWood", null, cv);
+        } catch (SQLiteException e) {
+            Log.d("HKGame", "Exception: " + Log.getStackTraceString(e));
+            throw new SQLiteException();
+        }
+    }
+
+    public void insertLockCoal(int level1,int level2,int level3,int level4,int level5,int level6,int level7,int level8,int level9,int level10){
+        ContentValues cv = new ContentValues();
+        cv.put("level1", level1);
+        cv.put("level2", level2);
+        cv.put("level3", level3);
+        cv.put("level4", level4);
+        cv.put("level5", level5);
+        cv.put("level6", level6);
+        cv.put("level7", level7);
+        cv.put("level8", level8);
+        cv.put("level9", level9);
+        cv.put("level10", level10);
+
+        try {
+            mDb.insertOrThrow("LockCoal", null, cv);
+        } catch (SQLiteException e) {
+            Log.d("HKGame", "Exception: " + Log.getStackTraceString(e));
+            throw new SQLiteException();
+        }
+    }
+
+    public void insertLockPlastic(int level1,int level2,int level3,int level4,int level5,int level6,int level7,int level8,int level9,int level10){
+        ContentValues cv = new ContentValues();
+        cv.put("level1", level1);
+        cv.put("level2", level2);
+        cv.put("level3", level3);
+        cv.put("level4", level4);
+        cv.put("level5", level5);
+        cv.put("level6", level6);
+        cv.put("level7", level7);
+        cv.put("level8", level8);
+        cv.put("level9", level9);
+        cv.put("level10", level10);
+
+        try {
+            mDb.insertOrThrow("LockPlastic", null, cv);
+        } catch (SQLiteException e) {
+            Log.d("HKGame", "Exception: " + Log.getStackTraceString(e));
+            throw new SQLiteException();
+        }
+    }
+
+    public void insertLockCoral(int level1,int level2,int level3,int level4,int level5,int level6,int level7,int level8,int level9,int level10){
+        ContentValues cv = new ContentValues();
+        cv.put("level1", level1);
+        cv.put("level2", level2);
+        cv.put("level3", level3);
+        cv.put("level4", level4);
+        cv.put("level5", level5);
+        cv.put("level6", level6);
+        cv.put("level7", level7);
+        cv.put("level8", level8);
+        cv.put("level9", level9);
+        cv.put("level10", level10);
+
+        try {
+            mDb.insertOrThrow("LockCoral", null, cv);
+        } catch (SQLiteException e) {
+            Log.d("HKGame", "Exception: " + Log.getStackTraceString(e));
+            throw new SQLiteException();
+        }
+    }
+
+    public void insertLockGold(int level1,int level2,int level3,int level4,int level5,int level6,int level7,int level8,int level9,int level10){
+        ContentValues cv = new ContentValues();
+        cv.put("level1", level1);
+        cv.put("level2", level2);
+        cv.put("level3", level3);
+        cv.put("level4", level4);
+        cv.put("level5", level5);
+        cv.put("level6", level6);
+        cv.put("level7", level7);
+        cv.put("level8", level8);
+        cv.put("level9", level9);
+        cv.put("level10", level10);
+
+        try {
+            mDb.insertOrThrow("LockGold", null, cv);
+        } catch (SQLiteException e) {
+            Log.d("HKGame", "Exception: " + Log.getStackTraceString(e));
+            throw new SQLiteException();
+        }
+    }
+
+    public void insertLockGas(int level1,int level2,int level3,int level4,int level5,int level6,int level7,int level8,int level9,int level10){
+        ContentValues cv = new ContentValues();
+        cv.put("level1", level1);
+        cv.put("level2", level2);
+        cv.put("level3", level3);
+        cv.put("level4", level4);
+        cv.put("level5", level5);
+        cv.put("level6", level6);
+        cv.put("level7", level7);
+        cv.put("level8", level8);
+        cv.put("level9", level9);
+        cv.put("level10", level10);
+
+        try {
+            mDb.insertOrThrow("LockGas", null, cv);
+        } catch (SQLiteException e) {
+            Log.d("HKGame", "Exception: " + Log.getStackTraceString(e));
+            throw new SQLiteException();
+        }
+    }
+
+    public void insertLockIce(int level1,int level2,int level3,int level4,int level5,int level6,int level7,int level8,int level9,int level10){
+        ContentValues cv = new ContentValues();
+        cv.put("level1", level1);
+        cv.put("level2", level2);
+        cv.put("level3", level3);
+        cv.put("level4", level4);
+        cv.put("level5", level5);
+        cv.put("level6", level6);
+        cv.put("level7", level7);
+        cv.put("level8", level8);
+        cv.put("level9", level9);
+        cv.put("level10", level10);
+
+        try {
+            mDb.insertOrThrow("LockIce", null, cv);
+        } catch (SQLiteException e) {
+            Log.d("HKGame", "Exception: " + Log.getStackTraceString(e));
+            throw new SQLiteException();
+        }
+    }
+
 
     public void insertNickName(String nick){
         ContentValues cv = new ContentValues();
@@ -376,12 +586,52 @@ public class DatabaseBeReader {
         return mDb.query("Amount", null, null, null,null, null, null);
     }
 
-    public Cursor queryALockLevel(){
+    public Cursor queryLockLevel(){
         return mDb.query("LockLevel", null, null, null,null, null, null);
     }
 
-    public Cursor queryLockPlanet(){
-        return mDb.query("LockPlanet", null, null, null,null, null, null);
+    public Cursor queryLockIsland(){
+        return mDb.query("LockIsland", null, null, null,null, null, null);
+    }
+
+    public Cursor queryLockAlga(){
+        return mDb.query("LockAlga", null, null, null,null, null, null);
+    }
+
+    public Cursor queryLockSand(){
+        return mDb.query("LockSand", null, null, null,null, null, null);
+    }
+
+    public Cursor queryLockStone(){
+        return mDb.query("LockStone", null, null, null,null, null, null);
+    }
+
+    public Cursor queryLockWood(){
+        return mDb.query("LockWood", null, null, null,null, null, null);
+    }
+
+    public Cursor queryLockCoal(){
+        return mDb.query("LockCoal", null, null, null,null, null, null);
+    }
+
+    public Cursor queryLockPlastic(){
+        return mDb.query("LockPlastic", null, null, null,null, null, null);
+    }
+
+    public Cursor queryLockCoral(){
+        return mDb.query("LockCoral", null, null, null,null, null, null);
+    }
+
+    public Cursor queryLockGold(){
+        return mDb.query("LockGold", null, null, null,null, null, null);
+    }
+
+    public Cursor queryLockGas(){
+        return mDb.query("LockGas", null, null, null,null, null, null);
+    }
+
+    public Cursor queryLockIce(){
+        return mDb.query("LockIce", null, null, null,null, null, null);
     }
 
     public Cursor queryOfftime(){

@@ -174,6 +174,136 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + "ice int);";
         db.execSQL(create_table_lockisland);
 
+        String create_table_lockAlga = "create table LockAlga("
+                + "level1 int,"
+                + "level2 int,"
+                + "level3 int,"
+                + "level4 int,"
+                + "level5 int,"
+                + "level6 int,"
+                + "level7 int,"
+                + "level8 int,"
+                + "level9 int,"
+                + "level10 int);";
+        db.execSQL(create_table_lockAlga);
+
+        String create_table_lockSand = "create table LockSand("
+                + "level1 int,"
+                + "level2 int,"
+                + "level3 int,"
+                + "level4 int,"
+                + "level5 int,"
+                + "level6 int,"
+                + "level7 int,"
+                + "level8 int,"
+                + "level9 int,"
+                + "level10 int);";
+        db.execSQL(create_table_lockSand);
+
+        String create_table_lockStone = "create table LockStone("
+                + "level1 int,"
+                + "level2 int,"
+                + "level3 int,"
+                + "level4 int,"
+                + "level5 int,"
+                + "level6 int,"
+                + "level7 int,"
+                + "level8 int,"
+                + "level9 int,"
+                + "level10 int);";
+        db.execSQL(create_table_lockStone);
+
+        String create_table_lockWood = "create table LockWood("
+                + "level1 int,"
+                + "level2 int,"
+                + "level3 int,"
+                + "level4 int,"
+                + "level5 int,"
+                + "level6 int,"
+                + "level7 int,"
+                + "level8 int,"
+                + "level9 int,"
+                + "level10 int);";
+        db.execSQL(create_table_lockWood);
+
+        String create_table_lockCoral = "create table LockCoral("
+                + "level1 int,"
+                + "level2 int,"
+                + "level3 int,"
+                + "level4 int,"
+                + "level5 int,"
+                + "level6 int,"
+                + "level7 int,"
+                + "level8 int,"
+                + "level9 int,"
+                + "level10 int);";
+        db.execSQL(create_table_lockCoral);
+
+        String create_table_lockPlastic = "create table LockPlastic("
+                + "level1 int,"
+                + "level2 int,"
+                + "level3 int,"
+                + "level4 int,"
+                + "level5 int,"
+                + "level6 int,"
+                + "level7 int,"
+                + "level8 int,"
+                + "level9 int,"
+                + "level10 int);";
+        db.execSQL(create_table_lockPlastic);
+
+        String create_table_lockCoal = "create table LockCoal("
+                + "level1 int,"
+                + "level2 int,"
+                + "level3 int,"
+                + "level4 int,"
+                + "level5 int,"
+                + "level6 int,"
+                + "level7 int,"
+                + "level8 int,"
+                + "level9 int,"
+                + "level10 int);";
+        db.execSQL(create_table_lockCoal);
+
+        String create_table_lockGold = "create table LockGold("
+                + "level1 int,"
+                + "level2 int,"
+                + "level3 int,"
+                + "level4 int,"
+                + "level5 int,"
+                + "level6 int,"
+                + "level7 int,"
+                + "level8 int,"
+                + "level9 int,"
+                + "level10 int);";
+        db.execSQL(create_table_lockGold);
+
+        String create_table_lockGas = "create table LockGas("
+                + "level1 int,"
+                + "level2 int,"
+                + "level3 int,"
+                + "level4 int,"
+                + "level5 int,"
+                + "level6 int,"
+                + "level7 int,"
+                + "level8 int,"
+                + "level9 int,"
+                + "level10 int);";
+        db.execSQL(create_table_lockGas);
+
+        String create_table_lockIce = "create table LockIce("
+                + "level1 int,"
+                + "level2 int,"
+                + "level3 int,"
+                + "level4 int,"
+                + "level5 int,"
+                + "level6 int,"
+                + "level7 int,"
+                + "level8 int,"
+                + "level9 int,"
+                + "level10 int);";
+        db.execSQL(create_table_lockIce);
+
         String create_table_nickname = "create table NickName("
                 + "nick varchar(15));";
         db.execSQL(create_table_nickname);
