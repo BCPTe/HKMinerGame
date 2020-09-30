@@ -24,4 +24,13 @@
         app:layout_constraintTop_toTopOf="@id/ciao"
         android:layout_marginTop="600dp"/>
 
+    <ImageView
+        android:id="@+id/image_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/text_nick"
+        app:layout_constraintBottom_toBottomOf="@id/button_nick"
+        app:layout_constraintEnd_toEndOf="@+id/ciao"
+        app:layout_constraintStart_toStartOf="@id/ciao"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
